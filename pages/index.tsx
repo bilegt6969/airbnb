@@ -27,13 +27,14 @@ const Home: NextPage<{ exploreData: any, cardsData: any }> = ({ exploreData, car
           </div>
         </section>
         <section>
-          <h2 className='text-4xl font-semibold py-8'>live anywhere</h2>
-          <div className='flex space-x-4 overflow-scroll scrollbar-hide p-3 -ml-3'> {cardsData?.map(item => (
-            <MediumCard key={item.img} img={item.img} title={item.title} />
-          ))}
-          </div>
-          
-        </section>
+  <h2 className='text-4xl font-semibold py-8'>live anywhere</h2>
+  <div className='flex space-x-4 overflow-scroll p-3 -ml-3'>
+  {cardsData?.map((item: {img: string, title: string}) => (
+  <MediumCard key={item.img} img={item.img} title={item.title} />
+))}
+  </div>
+</section>
+
         <LargeCard 
         img='https://links.papareact.com/4cj'
         title='The Greatest Outdoors'
